@@ -10,9 +10,11 @@ import java.io.Serializable;
 public class Evento implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long codigo;
+
     private String nome;
     private String local;
     private String data;
