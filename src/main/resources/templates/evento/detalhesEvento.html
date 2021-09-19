@@ -21,6 +21,9 @@
         <p>Local:<span th:text="${evento.local}"></span></p>
         <p>Data:<span th:text="${evento.data}"></span></p>
         <p>Horário:<span th:text="${evento.horario}"></span></p>
+    </div>
+
+    <th:block th:include="mensagemValidacao"></th:block>
 
         <form method="post">
             Nome:
@@ -29,7 +32,7 @@
             <input type="text" value="" name="rg" />
             <button type="submit" class="waves-effect waves-light btn"> Adicionar convidado</button>
         </form>
-    </div>
+
 </div>
 <h5>Lista de convidados</h5>
 <div class="container" th:each="convidado:${convidados} ">
